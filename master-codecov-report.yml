@@ -8,7 +8,6 @@ concurrency: master-codecov-report
 
 jobs:
   report-coverage:
-    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
@@ -29,7 +28,7 @@ jobs:
           directory: ./packages/core
 
       - name: Codecov UI
-        uses: codecov/codecov-action@v3
+
         with:
           flags: ui
           directory: ./packages/ui
